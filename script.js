@@ -1,28 +1,3 @@
-document.getElementById('convert-btn').addEventListener('click', () => {
-  const numberInput = document.getElementById('number').value.trim();
-  const outPutE = document.getElementById('output');
-
-  if (numberInput === '' || Number.isNaN(numberInput)) {
-    outPutE.textContent = 'Please enter a valid number.';
-    return;
-  }
-
-  const number = parseInt(numberInput, 10);
-
-  if (number < 1) {
-    outPutE.textContent ='Please enter a number greater than or equal to 1.';
-    return;
-  }
-
-  if (number > 3999) {
-    outPutE.textContent ='Please enter a number less than or equal to 3999.';
-    return;
-  }
-
-  const romanNumeral = convertToRoman(number);
-  outPutE.textContent = romanNumeral;
-});
-
 function convertToRoman(num) {
   let romanNumeral = '';
   const romanNumerals = [
@@ -50,3 +25,28 @@ function convertToRoman(num) {
 
   return romanNumeral;
 }
+
+document.getElementById('convert-btn').addEventListener('click', () => {
+  const numberInput = document.getElementById('number').value.trim();
+  const outPutE = document.getElementById('output');
+
+  if (numberInput === '' || Number.isNaN(numberInput)) {
+    outPutE.textContent = 'Please enter a valid number.';
+    return;
+  }
+
+  const number = parseInt(numberInput, 10);
+
+  if (number < 1) {
+    outPutE.textContent = 'Please enter a number greater than or equal to 1.';
+    return;
+  }
+
+  if (number > 3999) {
+    outPutE.textContent = 'Please enter a number less than or equal to 3999.';
+    return;
+  }
+
+  const romanNumeral = convertToRoman(number);
+  outPutE.textContent = romanNumeral;
+});
