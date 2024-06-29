@@ -64,12 +64,11 @@ label {
 
 @media only screen and (max-width: 767px) {
   body {
-    font-size: 12px; 
+    font-size: 12px;
   }
 
   .container {
     max-width: 300px;
     padding: 10px;
   }
-
 }
