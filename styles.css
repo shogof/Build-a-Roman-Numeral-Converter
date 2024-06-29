@@ -16,3 +16,48 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
 }
+
+h1 {
+  font-size: 2.5em;
+  color: #333333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+label {
+  color: #333333;
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#number {
+  padding: 10px;
+  font-size: 1.2em;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  width: calc(100% - 40px);
+  margin-bottom: 20px;
+}
+
+#convert-btn {
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#convert-btn:hover {
+  background-color: #555555;
+}
+
+#output {
+  margin-top: 30px;
+  font-size: 1.8em;
+  color: #333333;
+  font-weight: 700;
+}
