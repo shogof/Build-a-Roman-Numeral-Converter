@@ -1,13 +1,13 @@
 document.getElementById("convert-btn").addEventListener("click", function () {
-  var numberInput = document.getElementById("number").value.trim();
-  var outPutE = document.getElementById("output");
+  let numberInput = document.getElementById("number").value.trim();
+  let outPutE = document.getElementById("output");
 
   if (numberInput === "" || isNaN(numberInput)) {
     outPutE.textContent = "Please enter a valid number.";
     return;
   }
 
-  var number = parseInt(numberInput, 10);
+  let number = parseInt(numberInput, 10);
 
   if (number < 1) {
     outPutE.textContent =
@@ -21,13 +21,13 @@ document.getElementById("convert-btn").addEventListener("click", function () {
     return;
   }
 
-  var romanNumeral = convertToRoman(number);
+  let romanNumeral = convertToRoman(number);
   outPutE.textContent = romanNumeral;
 });
 
 function convertToRoman(num) {
-  var romanNumeral = "";
-  var romanNumerals = [
+  let romanNumeral = "";
+  let romanNumerals = [
     { value: 1000, numeral: "M" },
     { value: 900, numeral: "CM" },
     { value: 500, numeral: "D" },
@@ -43,7 +43,7 @@ function convertToRoman(num) {
     { value: 1, numeral: "I" },
   ];
 
-  for (var i = 0; i < romanNumerals.length; i++) {
+  for (let i = 0; i < romanNumerals.length; i += 1) {
     while (num >= romanNumerals[i].value) {
       romanNumeral += romanNumerals[i].numeral;
       num -= romanNumerals[i].value;
